@@ -1,0 +1,8 @@
+name = "GameOfLife"
+uuid = "17de39da-953b-4893-be3e-d7f747a6cc5a"
+authors = ["gerryflap <gerry2211@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
+NNlib = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
