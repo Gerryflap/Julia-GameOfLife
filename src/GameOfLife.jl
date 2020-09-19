@@ -56,6 +56,7 @@ function run_text(n_steps; pause=0.0, width=30, height=30, alive_chance=0.3)
     end
 end
 
+# === Code for GTK app ===
 # Global variables for the GTK app
 win = nothing
 data = nothing
@@ -89,7 +90,7 @@ function gtk_show_field(field)
     G_.from_pixbuf(view, pixbuf)
 end
 
-function run_gtk(;pause=0.0, width=30, height=30, alive_chance=0.3)
+function run_gtk(;pause=0.0001, width=800, height=600, alive_chance=0.3)
     # Runs the GTK app
     global running
     field = init_field(width, height, alive_chance)
@@ -102,6 +103,12 @@ function run_gtk(;pause=0.0, width=30, height=30, alive_chance=0.3)
         field = next_step(field)
         gtk_show_field(field)
     end
+end
+
+# === Main function for app artifact building ====
+function julia_main()
+    run_gtk()
+    return 0
 end
 
 
